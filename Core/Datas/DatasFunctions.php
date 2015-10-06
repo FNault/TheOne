@@ -11,7 +11,7 @@
 	 * unlimited additional other parameters to get multiple or single data from table
 	 * @return array|bool
 	 */
-	function _DatasGet($Host, $Username, $Password, $DataBase, $Table){
+	function _DataGet($Host, $Username, $Password, $DataBase, $Table){
 		if(func_num_args() < 5){
 			return FALSE;
 		}

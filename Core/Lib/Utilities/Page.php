@@ -14,7 +14,7 @@
 
         public function _getPageId($Name){
             $NameFound = FALSE;
-            $Pages = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
+            $Pages = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
             foreach($Pages as $Key=>$Value) {
                     //var_dump($Pages[$Key]);
                 foreach ($Pages[$Key] as $Key2 => $Value2){
@@ -31,7 +31,7 @@
 
         public function _getPageTitle($Name){
             $NameFound = FALSE;
-            $Pages = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
+            $Pages = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
             foreach($Pages as $Key=>$Value) {
                 //var_dump($Pages[$Key]);
                 foreach ($Pages[$Key] as $Key2 => $Value2){
@@ -48,7 +48,7 @@
 
         public function _getPageContent($Name){
             $NameFound = FALSE;
-            $Pages = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
+            $Pages = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
             foreach($Pages as $Key=>$Value) {
                 //var_dump($Pages[$Key]);
                 foreach ($Pages[$Key] as $Key2 => $Value2){
@@ -65,7 +65,7 @@
 
         public function _getPageAuthor($Name){
             $NameFound = FALSE;
-            $Pages = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
+            $Pages = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
             foreach($Pages as $Key=>$Value) {
                 //var_dump($Pages[$Key]);
                 foreach ($Pages[$Key] as $Key2 => $Value2){
@@ -82,7 +82,7 @@
 
         public function _getPageDate($Name){
             $NameFound = FALSE;
-            $Pages = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
+            $Pages = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages');
             foreach($Pages as $Key=>$Value) {
                 //var_dump($Pages[$Key]);
                 foreach ($Pages[$Key] as $Key2 => $Value2){
@@ -114,9 +114,10 @@
         }
 
         public function  _postPage(){
-            //$PagesId = _DatasGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages', 'id');
+            //$PagesId = _DataGet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages', 'id');
             //$this->PageId = count($PagesId) + 1;
-            _DataSet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages', "id:NULL,name:{$this->PageName},title:{$this->PageTitle},content:{$this->PageContent},author:{$this->PageAuthor},date:{$this->PageDate}");
+            _DataSet(HOST, DB_USER, DB_PASS, DB_NAME, 'pages', "id:NULL,name:{$this->PageName},
+            title:{$this->PageTitle},content:{$this->PageContent},author:{$this->PageAuthor},date:{$this->PageDate}");
         }
 	}
 
